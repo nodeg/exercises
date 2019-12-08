@@ -12,3 +12,6 @@ awp/skript
 awp/stuff
 awp/.vscode
 plans
+
+#in case LibreOffice File is open
+.~lock.*
