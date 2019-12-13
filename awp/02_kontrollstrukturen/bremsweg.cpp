@@ -59,26 +59,27 @@ int main() {
 
                 case 1:
                 {
-                    i_verzoegerung = 9;
+                    i_verzoegerung = 3;
                     break;
                 }
                 case 2:
                 {
-                    i_verzoegerung = 7;
+                    i_verzoegerung = 5;
                     break;
                 }
                 case 3:
                 {
-                    i_verzoegerung = 5;
+                    i_verzoegerung = 7;
                     break;
                 }
                 case 4:
                 {
-                    i_verzoegerung = 3;
+                    i_verzoegerung = 9;
                     break;
                 }
                 default:
                 {
+                    cout << "Falsche Eingabe!\n";
                     break;
                 }
             }
@@ -94,7 +95,7 @@ int main() {
 
         } else {
             cout << "\nAnhalteweg: " << f_anhalteweg << "\n";
-            cout << "Unfall! Das Tier aus Sicherheitsgründen nicht in den Kofferraum laden!\n\n";
+            cout << "Unfall! Das Tier aus sicherheits- und rechtlichen Gründen nicht in den Kofferraum laden!\n\n";
 
         }
 
