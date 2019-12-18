@@ -6,6 +6,7 @@ int main ()
     // Variablen definieren und initialisieren
     int hoehe = 0;
     int auswahl = 0;
+    int stamm = 1;
     char erneut = ' ';
 
     do
@@ -100,26 +101,49 @@ int main ()
                 case 5:
                     {
                         cout << "- Variante 5 -\n\n";
+                        
+                        // Anpassung des Stammes
+                        if (hoehe == 2)
+                        {
+                            stamm = 1;
+                        }
+                        if (hoehe > 2 && hoehe <= 5)
+                        {
+                            stamm = 2;
+                        } else if (hoehe > 5 && hoehe <= 7)
+                        {
+                            stamm = 3;
+                        } else if (hoehe > 7 && hoehe <= 15)
+                        {
+                            stamm = 4;
+                        } else if (hoehe > 15) {
+                            stamm = 5;
+                        }
 
                         for (int i = 1; i <= hoehe; i++)
                         {
+                            // Leerzeichen zeichnen
                             for (int h = hoehe; h > i; h--)
                             {
                                 cout << " ";
                             }
+
+                            // Baum zeichnen
                             for (int j = 1; j <= 2 * i - 1; j += 2)
                             {
+                                // Farbe grün
                                 cout << "\033[1;32mx\033[0m" << " ";
                             }
                             cout << "\n";
                         }
-                        // Baumstamm, feste Höhe von 4
-                        for (int j = 0; j < 4; j++)
+                        // Baumstamm zeichnen
+                        for (int j = 0; j < stamm; j++)
                         {
                             for (int h = 0; h < hoehe - 1; h++)
                             {
                                 cout << " ";
                             }
+                            // Farbe braun
                             cout << "\033[1;33mH\033[0m" << "\n";
                         }
 
@@ -136,7 +160,7 @@ int main ()
         while (auswahl < 1 || auswahl > 5);
 
 
-        cout << "Noch ein Baum? <j/J>? ";
+        cout << "Soll noch ein Baum gezeichnet werden? <j/J>? ";
         cin >> erneut;
 
     }
