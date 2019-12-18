@@ -6,16 +6,28 @@ int main ()
     // Variablen definieren und initialisieren
     int hoehe = 0;
     int auswahl = 0;
-    int stamm = 1;
+    int stamm = 3;
     char erneut = ' ';
 
     do
     {
-        // Ausgabe und Einlesen der Werte Höhe und Auswahl
-        cout << "--- doms Weihnachtsbaum-Generator ---\n\n";
-        cout << "Bitte die Höhe des Baumes eingeben: ";
-        cin >> hoehe;
+        do {
+            // Ausgabe und Einlesen der Werte Höhe und Auswahl
+            cout << "--- doms Weihnachtsbaum-Generator ---\n\n";
+            cout << "Bitte die Höhe des Baumes eingeben <5-40>: ";
+            cin >> hoehe;
+        } while (hoehe < 5 || hoehe > 40);
 
+        // Anpassung des Stammes
+        if (hoehe > 5 && hoehe <= 10)
+        {
+            stamm = 4;
+        } else if (hoehe > 10 && hoehe <= 20)
+        {
+            stamm = 5;
+        } else if (hoehe > 20) {
+            stamm = 6;
+        }
         // Abfangen einer ungültigen Variante
         do
         {
@@ -87,8 +99,7 @@ int main ()
                             }
                             cout << "\n";
                         }
-                        // Baumstamm, feste Höhe von 4
-                        for (int j = 0; j < 4; j++)
+                        for (int j = 0; j < stamm; j++)
                         {
                             for (int h = 0; h < hoehe - 1; h++)
                             {
@@ -101,24 +112,6 @@ int main ()
                 case 5:
                     {
                         cout << "- Variante 5 -\n\n";
-                        
-                        // Anpassung des Stammes
-                        if (hoehe == 2)
-                        {
-                            stamm = 1;
-                        }
-                        if (hoehe > 2 && hoehe <= 5)
-                        {
-                            stamm = 2;
-                        } else if (hoehe > 5 && hoehe <= 7)
-                        {
-                            stamm = 3;
-                        } else if (hoehe > 7 && hoehe <= 15)
-                        {
-                            stamm = 4;
-                        } else if (hoehe > 15) {
-                            stamm = 5;
-                        }
 
                         for (int i = 1; i <= hoehe; i++)
                         {
