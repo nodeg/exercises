@@ -2,7 +2,6 @@
  * @author: dom
  * @date: 12.02.2020
  *
- * TODO: set precision for float values
  ****************************************/
 
 #include <iostream>
@@ -48,7 +47,7 @@ int main()
                 i_Laufzeit = eingabeBetrag();
                 f_Endkapital = berechneEndbetrag(f_Kapital, f_Zinssatz, i_Laufzeit);
 
-                cout << "\nKapital nach " << i_Laufzeit << " Jahren: " << f_Endkapital << endl;
+                cout << "\nKapital nach " << i_Laufzeit << " Jahren: " << f_Endkapital << " €" << endl;
                 break;
             }
             case 2:
@@ -77,7 +76,7 @@ int main()
                 cout << "\n\n";
 
                 f_Endkapital = berechneAnnuitaet(f_Kapital, f_Zinssatz, i_Laufzeit);
-                cout << "Jährliche Annuität: " << f_Endkapital << "\n\n";
+                cout << "Jährliche Annuität: " << f_Endkapital << " €" << "\n\n";
 
                 berechneTilgung(f_Kapital, f_Zinssatz, i_Laufzeit);
                 break;
@@ -145,7 +144,7 @@ void berechneEndbetrag_jaehrlich(float kapital, float zinssatz, int laufzeit)
     for (int t = 1; t <= laufzeit; t++)
     {
         f_Endkapital = berechneEndbetrag(kapital, zinssatz, t);
-        cout << "Nach dem " << t << ".Jahr:    " << f_Endkapital << endl;
+        cout << "Nach dem " << t << ".Jahr:    " << f_Endkapital << " €" << endl;
     }
 }
 
@@ -175,7 +174,7 @@ void berechneTilgung(float kreditsumme, float zinssatz, int laufzeit)
         f_Restschuld -= f_Tilgungsanteil;
         f_Gesamtzinsen += f_Zinsanteil;
 
-        cout << "Nach dem " << t << ".Jahr:  " << f_Zinsanteil << "       " << f_Tilgungsanteil << "         " << f_Restschuld << endl;
+        cout << fixed << setprecision(2) << "Nach dem " << t << ".Jahr:  " << f_Zinsanteil << " €     " << f_Tilgungsanteil << " €       " << f_Restschuld << " €\n";
     }
-    cout << "\n\nGesamte Zinsen: " << f_Gesamtzinsen << "\n\n";
+    cout << "\n\nGesamte Zinsen: " << f_Gesamtzinsen << " €\n\n";
 }
