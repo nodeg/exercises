@@ -44,16 +44,17 @@ int main()
 {
     int x = 0;
     int y = 0;
-    int menu = 0; 
+    int menu = 0;
 
-    //Hier Funktionen testen:
-	cout << "Zahl 1 eingeben: ";
+    //Hier Funktionen testen
+    cout << "Bitte Zahl 1 (int) eingeben: ";
     cin >> x;
-    cout << "Zahl 2 eingeben: ";
+    cout << "Bitte Zahl 2 (int) eingeben: ";
     cin >> y;
 
-	//f_Ergebnis = quadriere(4);
-	cout << "Ergebnis naechste(): " << naechste(x) << endl;
+    cout << "Es wird immer mit Zahl 1 gerechnet!\n\n";
+    //cout << "Ergebnis quadriere(): " << quadriere(x) << endl;
+    cout << "Ergebnis naechste(): " << naechste(x) << endl;
     cout << "Ergebnis kleinste(): " << kleinste(x, y) << endl;
     cout << "Ergebnis groesste(): " << groesste(x, y) << endl;
     cout << "Eregebnis runde(): " << runde(x) << endl;
@@ -64,7 +65,7 @@ int main()
     cout << "\n Menuauswahl() \n";
     menu = menueauswahl();
     cout << "Menuauswahl: " << menu << endl;
-	return 0;
+    return 0;
 }
 
 
@@ -72,8 +73,8 @@ int main()
 // Definieren Sie ab hier die oben deklarierten Funktionen //
 /////////////////////////////////////////////////////////////////
 float quadriere(float x){
-	float f_Quadrat = 0;
-	f_Quadrat = x*x;
+    float f_Quadrat = 0;
+    f_Quadrat = x*x;
     return f_Quadrat;
 }
 
