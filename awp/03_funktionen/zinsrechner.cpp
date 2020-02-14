@@ -116,11 +116,9 @@ int menue()
 
     if (i_Auswahl > i_Menuepunkte || i_Auswahl <= 0)
     {
-        return -1;
-    } else
-    {
-        return i_Auswahl;
+        i_Auswahl =  -1;
     }
+    return i_Auswahl;
 }
 
 float eingabeBetrag()
