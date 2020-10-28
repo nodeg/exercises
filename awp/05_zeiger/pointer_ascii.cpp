@@ -92,6 +92,7 @@ void sort_char(char *values, int len) {
         swapped = false;
         for (int i = 0; i < length; i++) {
             if (values[i] < values[i + 1]) {
+                // swap values
                 tmp = values[i];
                 values[i] = values[i + 1];
                 values[i + 1] = tmp;
