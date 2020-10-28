@@ -18,6 +18,7 @@ int main()
     {
         values[i] = (char) (97 + i);
     }
+    values[26] = '\0';
 
     // should the values be sorted?
     do {
@@ -63,7 +64,7 @@ void print_ascii(char *chars, int *values, int len)
 int max_value(int *values, int len)
 {
     int max = values[0];
-    for (int i = 0; i < len; i++)
+    for (int i = 0; i < len - 1; i++)
     {
         if (max < values[i])
         {
