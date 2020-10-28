@@ -87,7 +87,7 @@ void sort_int(int *values, int len) {
 // reverse bubble sort. Outputs the biggest value first
 void sort_char(char *values, int len) {
     bool swapped;
-    int length = len - 1;
+    int length = len - 2;
     int tmp;
     do {
         swapped = false;
