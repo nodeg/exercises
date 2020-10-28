@@ -78,7 +78,7 @@ int max_value(int *values, int len)
 void sort_int(int *values, int len)
 {
     bool swapped;
-    int length = len - 1;
+    int length = len - 2; // Null byte!
     int tmp;
     do {
         swapped = false;
