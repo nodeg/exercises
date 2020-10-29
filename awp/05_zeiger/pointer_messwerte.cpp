@@ -11,13 +11,15 @@ int main() {
 
     // input
     cout << "How many values would you like to save? ";
+    cout << "If you want to abort, please input 0! ";
     cin >> quantity;
     values = new float[quantity];
 
     for (int i = 0; i < quantity; i++) {
         cin >> checkValue;
-        if (checkValue < 0) {
+        if (checkValue < 0 || checkValue == 0) {
             *(values + i) = 0;
+            break;
         } else {
             *(values + i) = checkValue;
         }
@@ -26,7 +28,9 @@ int main() {
     // output
     cout << endl << "Values: ";
     for (int i = 0; i < quantity; i++) {
-        cout << *(values + i) << ", ";
+        if (values[i] != 0) {
+            cout << *(values + i) << ", ";
+        }
     }
 
     cout << endl << "Mean value: " << mean_value(values, quantity);
