@@ -19,6 +19,7 @@ int main() {
         cin >> checkValue;
         if (checkValue < 0 || checkValue == 0) {
             *(values + i) = 0;
+            quantity = i;
             break;
         } else {
             *(values + i) = checkValue;
@@ -41,11 +42,21 @@ int main() {
     return 0;
 }
 
+void input(float *values, int len) {
+
+}
+
+void output(float *values, int len) {
+
+}
+
 // calculates the mean value
 float mean_value(float* values, int len) {
     float mean = 0.0;
     for (int i = 0; i < len; i++) {
-        mean += *(values + i);
+        if (values[i] != 0) {
+            mean += *(values + i);
+        }
     }
     mean /= len;
 
