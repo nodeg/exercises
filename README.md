@@ -1,1 +1,1 @@
-Personal exercises in C++.
+Personal exercises.
