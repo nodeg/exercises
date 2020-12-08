@@ -63,7 +63,7 @@ function menu {
     echo "6. Show customer orders"
     echo "7. Show products"
     echo "8. Show addresses"
-    echo "7. Exit"
+    echo "9. Exit"
     read menu_selection
 }
 
