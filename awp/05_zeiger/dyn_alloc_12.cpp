@@ -1,3 +1,5 @@
+// exercise 1 + 2
+
 #include <iostream>
 
 using namespace std;
@@ -40,14 +42,6 @@ int main() {
     delete values;
     values = nullptr;
     return 0;
-}
-
-void input(float *values, int len) {
-
-}
-
-void output(float *values, int len) {
-
 }
 
 // calculates the mean value
