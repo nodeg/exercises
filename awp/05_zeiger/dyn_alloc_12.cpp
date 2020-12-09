@@ -39,7 +39,7 @@ int main() {
     cout << endl << "Mean value: " << mean_value(values, quantity);
 
     // clean up
-    delete values;
+    delete[] values;
     values = nullptr;
     return 0;
 }
