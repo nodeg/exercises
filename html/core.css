@@ -1,0 +1,15 @@
+.left   { text-align: left; }
+.right  { text-align: right; }
+.bold   { text-style: bold; }
+
+.red    { color: red; }
+.green  { color: green; }
+.grey   { background-color: grey; }
+
+.border {
+    border: 1px solid;
+    border-collapse: collapse;
+}
+.logo {
+    float: right;
+}
