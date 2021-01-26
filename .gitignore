@@ -1,5 +1,6 @@
 # Ignore all
 *
+.*
 
 # Unignore all with extensions
 !*.*
@@ -9,3 +10,4 @@
 
 #in case LibreOffice File is open
 .~lock.*
+.DS_Store
