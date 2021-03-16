@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="core.css">
+        <title>Autohaus Nettmann - Autovermietung</title>
+    </head>
+    <body>
+        <h1>Willkommen bei der Nettmann-Autovermietung</h1>
+        <p>Welchen Wagen moechten Sie?</p>
+        <form action= "submit.php" method="post">
+            <select name="auto">
+                <option value="Audi">Audi</option>
+                <option value="BMW">BMW</option>
+                <option value="Saab">Saab</option>
+                <option value="Mercedes">Mercedes</option>
+            </select>
+            </br></br>
+            <input type="checkbox" name="age" value="agreed">
+            <label>Der Fahrer ist aelter als 25 Jahre.</label>
+            </br></br>
+            <p>Wann benoetigen Sie den Wagen?</p>
+            <input type="date" name="date" min="2021-01-01" max="2021-12-31">
+            </br></br>
+            <p>Geben Sie die Zalungsweise an:</p>
+            <input type="radio" name="payment" value="Mastecard">
+                <label>Mastercard</label>
+            <input type="radio" name="payment" value="Visa">
+                <label>Visa</label>
+            <input type="radio" name="payment" value="American Express">
+                <label>American Express</label>
+            </br></br>
+            <input type="submit" name="submit" value="Senden">
+        </form>
+  </body>
+</html>
