@@ -93,4 +93,3 @@ GROUP BY kunde.name;
 -- 4. Gesamtwert unseres Lagers (Netto)
 
 -- 5. Wert der lagernden Zulieferartikel und Namen der Lieferanten (Nettopreise)
-
