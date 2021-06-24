@@ -11,3 +11,4 @@
 #in case LibreOffice File is open
 .~lock.*
 .DS_Store
+.vscode
